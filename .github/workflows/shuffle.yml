@@ -1,0 +1,68 @@
+name: Shuffle README Banner
+
+# Rotates the ASCII banner + tagline inside README.md on a schedule,
+# so the profile genuinely changes even for visitors whose browser
+# (or GitHub's camo proxy) caches the third-party SVGs.
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # every hour, off-the-hour to dodge cron congestion
+  workflow_dispatch:
+
+jobs:
+  shuffle:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pick a random banner
+        run: |
+          python3 - <<'PY'
+          import random, re, pathlib
+
+          BANNERS = [
+              ("SEGFAULT AVOIDED",   "Every system is secure until someone reads the source."),
+              ("PAYLOAD DELIVERED",  "I don't break software. I reveal what it already was."),
+              ("ROOT ACQUIRED",      "Privilege escalation is just reading the docs carefully."),
+              ("ZERO DAY LOADED",    "The bug was in production the whole time."),
+              ("HANDSHAKE COMPLETE", "Trust nothing. Verify everything. Automate the rest."),
+              ("FIREWALL BYPASSED",  "Defence in depth means the attacker gets bored first."),
+              ("SHELL SPAWNED",      "cat /dev/urandom > /dev/brain"),
+              ("CHECKSUM VERIFIED",  "If it has an input, it has an attack surface."),
+              ("TUNNEL ENCRYPTED",   "Security is a process, and I automate processes."),
+              ("EXPLOIT PATCHED",    "Exploit -> Understand -> Patch -> Repeat."),
+          ]
+
+          title, tagline = random.choice(BANNERS)
+          block = (
+              "<!--BANNER:START-->\n"
+              "```console\n"
+              f"root@github:~# ./status\n"
+              f"[+] {title}\n"
+              f"[*] {tagline}\n"
+              "```\n"
+              "<!--BANNER:END-->"
+          )
+
+          p = pathlib.Path("README.md")
+          text = p.read_text(encoding="utf-8")
+          new = re.sub(
+              r"<!--BANNER:START-->.*?<!--BANNER:END-->",
+              lambda _: block,
+              text,
+              flags=re.S,
+          )
+          if new == text:
+              print("No BANNER markers found - nothing to shuffle.")
+          p.write_text(new, encoding="utf-8")
+          PY
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "chore: shuffle banner [skip ci]"
+          git push
