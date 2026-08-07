@@ -1,12 +1,12 @@
-name: Shuffle Status Banner
+name: Shuffle README Banner
 
-# Regenerates assets/banner.svg with a random tagline on a schedule, so the
-# profile changes even for visitors whose browser (or GitHub's camo proxy)
-# has the other SVGs cached. Keeps the pure-black + scanline styling.
+# Rotates the ASCII banner + tagline inside README.md on a schedule,
+# so the profile genuinely changes even for visitors whose browser
+# (or GitHub's camo proxy) caches the third-party SVGs.
 
 on:
   schedule:
-    - cron: "17 * * * *"   # hourly, off-the-hour to dodge cron congestion
+    - cron: "17 * * * *"   # every hour, off-the-hour to dodge cron congestion
   workflow_dispatch:
 
 jobs:
@@ -17,10 +17,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Render a random banner
+      - name: Pick a random banner
         run: |
           python3 - <<'PY'
-          import random, pathlib, html
+          import random, re, pathlib
 
           BANNERS = [
               ("SEGFAULT AVOIDED",   "Every system is secure until someone reads the source."),
@@ -36,55 +36,33 @@ jobs:
           ]
 
           title, tagline = random.choice(BANNERS)
-          t, g = html.escape(title), html.escape(tagline)
+          block = (
+              "<!--BANNER:START-->\n"
+              "```console\n"
+              f"root@github:~# ./status\n"
+              f"[+] {title}\n"
+              f"[*] {tagline}\n"
+              "```\n"
+              "<!--BANNER:END-->"
+          )
 
-          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="130" viewBox="0 0 1000 130" role="img" aria-label="status banner">
-            <defs>
-              <pattern id="crt4" width="4" height="4" patternUnits="userSpaceOnUse">
-                <rect width="4" height="4" fill="#000000"/>
-                <rect width="4" height="1" fill="#00ff41" opacity="0.05"/>
-              </pattern>
-              <linearGradient id="scanGlow4" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#00ff41" stop-opacity="0"/>
-                <stop offset="70%" stop-color="#00ff41" stop-opacity="0.09"/>
-                <stop offset="100%" stop-color="#00ff41" stop-opacity="0.32"/>
-              </linearGradient>
-              <filter id="sg4" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="1.4" result="b"/>
-                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-
-            <rect width="1000" height="130" fill="#000000"/>
-
-            <g font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,monospace" font-size="15" filter="url(#sg4)">
-              <text x="40" y="40"><tspan fill="#00ff41" opacity="0.55">root@github:~#</tspan><tspan fill="#e6ffe6"> ./status</tspan></text>
-              <text x="40" y="72"><tspan fill="#00ff41">[+] </tspan><tspan fill="#00ff41" font-weight="700">{t}</tspan></text>
-              <text x="40" y="104"><tspan fill="#4d8060">[*] </tspan><tspan fill="#9be89b">{g}</tspan></text>
-            </g>
-
-            <rect width="1000" height="130" fill="url(#crt4)" opacity="0.85" style="mix-blend-mode:screen"/>
-
-            <g>
-              <animateTransform attributeName="transform" type="translate" values="0 -90; 0 140" dur="3.6s" repeatCount="indefinite"/>
-              <rect x="0" y="0" width="1000" height="80" fill="url(#scanGlow4)"/>
-              <rect x="0" y="80" width="1000" height="2" fill="#00ff41" opacity="0.8"/>
-            </g>
-
-            <rect x="0.5" y="0.5" width="999" height="129" fill="none" stroke="#00ff41" stroke-width="1" opacity="0.3"/>
-          </svg>
-          '''
-
-          out = pathlib.Path("assets/banner.svg")
-          out.parent.mkdir(parents=True, exist_ok=True)
-          out.write_text(svg, encoding="utf-8")
-          print(f"rendered: {title}")
+          p = pathlib.Path("README.md")
+          text = p.read_text(encoding="utf-8")
+          new = re.sub(
+              r"<!--BANNER:START-->.*?<!--BANNER:END-->",
+              lambda _: block,
+              text,
+              flags=re.S,
+          )
+          if new == text:
+              print("No BANNER markers found - nothing to shuffle.")
+          p.write_text(new, encoding="utf-8")
           PY
 
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/banner.svg
-          git diff --staged --quiet || git commit -m "chore: shuffle status banner [skip ci]"
+          git add README.md
+          git diff --staged --quiet || git commit -m "chore: shuffle banner [skip ci]"
           git push
