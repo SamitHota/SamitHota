@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-label="whoami.json">
+  <defs>
+    <pattern id="crt2" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#000000"/>
+      <rect width="4" height="1" fill="#00ff41" opacity="0.05"/>
+    </pattern>
+    <linearGradient id="scanGlow2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#00ff41" stop-opacity="0"/>
+      <stop offset="70%"  stop-color="#00ff41" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#00ff41" stop-opacity="0.32"/>
+    </linearGradient>
+    <filter id="sg2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="300" fill="#000000"/>
+
+  <!-- title bar -->
+  <g font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,monospace">
+    <circle cx="24" cy="24" r="5" fill="#ff5f56" opacity="0.75"/>
+    <circle cx="42" cy="24" r="5" fill="#ffbd2e" opacity="0.75"/>
+    <circle cx="60" cy="24" r="5" fill="#27c93f" opacity="0.75"/>
+    <text x="84" y="29" font-size="13" fill="#00ff41" opacity="0.5">~/whoami.json</text>
+    <line x1="0" y1="44" x2="1000" y2="44" stroke="#00ff41" stroke-width="1" opacity="0.18"/>
+
+    <g font-size="15" filter="url(#sg2)">
+      <text x="30" y="78"  fill="#4d8060">{</text>
+
+      <text x="30" y="102"><tspan fill="#00ff41">  "handle"</tspan><tspan fill="#4d8060">     : </tspan><tspan fill="#9be89b">"SamitHota"</tspan><tspan fill="#4d8060">,</tspan></text>
+      <text x="30" y="126"><tspan fill="#00ff41">  "role"</tspan><tspan fill="#4d8060">       : </tspan><tspan fill="#9be89b">"Security Engineer &amp; Software Developer"</tspan><tspan fill="#4d8060">,</tspan></text>
+      <text x="30" y="150"><tspan fill="#00ff41">  "focus"</tspan><tspan fill="#4d8060">      : [</tspan><tspan fill="#9be89b">"appsec"</tspan><tspan fill="#4d8060">, </tspan><tspan fill="#9be89b">"offensive-security"</tspan><tspan fill="#4d8060">, </tspan><tspan fill="#9be89b">"automation"</tspan><tspan fill="#4d8060">, </tspan><tspan fill="#9be89b">"cloud"</tspan><tspan fill="#4d8060">, </tspan><tspan fill="#9be89b">"web dev"</tspan><tspan fill="#4d8060">],</tspan></text>
+      <text x="30" y="174"><tspan fill="#00ff41">  "currently"</tspan><tspan fill="#4d8060">  : </tspan><tspan fill="#9be89b">"turning findings into fixes, and fixes into pipelines"</tspan><tspan fill="#4d8060">,</tspan></text>
+      <text x="30" y="198"><tspan fill="#00ff41">  "learning"</tspan><tspan fill="#4d8060">   : [</tspan><tspan fill="#9be89b">"eBPF"</tspan><tspan fill="#4d8060">, </tspan><tspan fill="#9be89b">"supply-chain security"</tspan><tspan fill="#4d8060">, </tspan><tspan fill="#9be89b">"LLM red-teaming"</tspan><tspan fill="#4d8060">],</tspan></text>
+      <text x="30" y="222"><tspan fill="#00ff41">  "philosophy"</tspan><tspan fill="#4d8060"> : </tspan><tspan fill="#9be89b">"Trust nothing. Verify everything. Automate the rest."</tspan><tspan fill="#4d8060">,</tspan></text>
+      <text x="30" y="246"><tspan fill="#00ff41">  "reachable"</tspan><tspan fill="#4d8060">  : </tspan><tspan fill="#56d364">true</tspan><tspan fill="#4d8060">,</tspan></text>
+      <text x="30" y="270"><tspan fill="#00ff41">  "vulnerable"</tspan><tspan fill="#4d8060"> : </tspan><tspan fill="#ff6b6b">false</tspan></text>
+
+      <text x="30" y="292" fill="#4d8060">}</text>
+    </g>
+  </g>
+
+  <rect width="1000" height="300" fill="url(#crt2)" opacity="0.85" style="mix-blend-mode:screen"/>
+
+  <!-- continuous top-to-bottom scanner -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 -100; 0 310" dur="3.6s" repeatCount="indefinite"/>
+    <rect x="0" y="0" width="1000" height="90" fill="url(#scanGlow2)"/>
+    <rect x="0" y="90" width="1000" height="2" fill="#00ff41" opacity="0.8"/>
+  </g>
+
+  <rect x="0.5" y="0.5" width="999" height="299" fill="none" stroke="#00ff41" stroke-width="1" opacity="0.3"/>
+</svg>
