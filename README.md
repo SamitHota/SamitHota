@@ -54,9 +54,7 @@ root@github:~# ./status
 
 <img src="https://quotes-github-readme.vercel.app/api?type=vertical&theme=radical" alt="random dev quote" />
 
-<img src="https://readme-jokes.vercel.app/api?theme=chartreuse-dark&hideBorder=false&qColor=%2300ff41&aColor=%23ffffff&bgColor=%230d1117&borderColor=%2300ff41" alt="random dev joke" width="60%" />
-
-<sub><i>↑ regenerated server-side — a different quote and joke every single load ↑</i></sub>
+<sub><i>↑ regenerated server-side — a different quote every single load ↑</i></sub>
 
 </div>
 
