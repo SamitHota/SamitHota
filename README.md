@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:00ff41,100:008f11&height=200&section=header&text=SamitHota&fontSize=70&fontColor=00ff41&animation=fadeIn&fontAlignY=35&desc=root@github:~%23%20whoami&descAlignY=55&descSize=18" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:003b00,100:0d1117&height=200&section=header&text=SamitHota&fontSize=70&fontColor=00ff41&animation=fadeIn&fontAlignY=35&desc=root@github:~%23%20whoami&descAlignY=55&descSize=18" width="100%" />
 
 ```console
 root@github:~# ./initiate_handshake.sh --user SamitHota
@@ -101,16 +101,21 @@ root@github:~# ./status
 
 <div align="center">
 
-<img height="170em" src="https://github-readme-stats.vercel.app/api?username=SamitHota&show_icons=true&theme=chartreuse-dark&hide_border=false&border_color=00ff41&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&include_all_commits=true&count_private=true" alt="stats" />
-<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SamitHota&layout=compact&theme=chartreuse-dark&hide_border=false&border_color=00ff41&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&langs_count=8" alt="top langs" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=SamitHota&theme=github_dark" alt="profile summary" width="100%" />
+
+<img height="190em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=SamitHota&theme=github_dark" alt="stats" />
+<img height="190em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SamitHota&theme=github_dark" alt="repos per language" />
+
+<img height="190em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=SamitHota&theme=github_dark" alt="most commit language" />
+<img height="190em" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=SamitHota&theme=github_dark&utcOffset=5.5" alt="productive time" />
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=SamitHota&theme=chartreuse-dark&hide_border=false&border=00ff41&background=0d1117&ring=00ff41&fire=00ff41&currStreakLabel=00ff41" alt="streak" width="70%" />
+<img src="https://streak-stats.demolab.com/?user=SamitHota&theme=chartreuse-dark&hide_border=false&border=00ff41&background=0d1117&ring=00ff41&fire=00ff41&currStreakLabel=00ff41" alt="streak" width="70%" />
 
 <br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=SamitHota&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" alt="trophies" width="100%" />
+<img src="https://github-trophies.vercel.app/?username=SamitHota&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" alt="trophies" width="100%" />
 
 </div>
 
@@ -155,6 +160,6 @@ root@github:~# exit
 [*] session terminated. see you next boot.
 ```
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:008f11,50:00ff41,100:000000&height=140&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:003b00,100:0d1117&height=140&section=footer" width="100%" />
 
 </div>
