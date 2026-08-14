@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] ROOT ACQUIRED
-[*] Privilege escalation is just reading the docs carefully.
+[+] HANDSHAKE COMPLETE
+[*] Trust nothing. Verify everything. Automate the rest.
 ```
 <!--BANNER:END-->
 
