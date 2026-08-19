@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] FIREWALL BYPASSED
-[*] Defence in depth means the attacker gets bored first.
+[+] ZERO DAY LOADED
+[*] The bug was in production the whole time.
 ```
 <!--BANNER:END-->
 
