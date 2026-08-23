@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] CHECKSUM VERIFIED
-[*] If it has an input, it has an attack surface.
+[+] ZERO DAY LOADED
+[*] The bug was in production the whole time.
 ```
 <!--BANNER:END-->
 
