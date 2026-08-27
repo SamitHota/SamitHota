@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] TUNNEL ENCRYPTED
-[*] Security is a process, and I automate processes.
+[+] PAYLOAD DELIVERED
+[*] I don't break software. I reveal what it already was.
 ```
 <!--BANNER:END-->
 
