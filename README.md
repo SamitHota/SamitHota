@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] FIREWALL BYPASSED
-[*] Defence in depth means the attacker gets bored first.
+[+] PAYLOAD DELIVERED
+[*] I don't break software. I reveal what it already was.
 ```
 <!--BANNER:END-->
 
