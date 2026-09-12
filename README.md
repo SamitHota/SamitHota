@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] HANDSHAKE COMPLETE
-[*] Trust nothing. Verify everything. Automate the rest.
+[+] SEGFAULT AVOIDED
+[*] Every system is secure until someone reads the source.
 ```
 <!--BANNER:END-->
 
