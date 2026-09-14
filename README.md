@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] EXPLOIT PATCHED
-[*] Exploit -> Understand -> Patch -> Repeat.
+[+] FIREWALL BYPASSED
+[*] Defence in depth means the attacker gets bored first.
 ```
 <!--BANNER:END-->
 
