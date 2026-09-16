@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] EXPLOIT PATCHED
-[*] Exploit -> Understand -> Patch -> Repeat.
+[+] ZERO DAY LOADED
+[*] The bug was in production the whole time.
 ```
 <!--BANNER:END-->
 
