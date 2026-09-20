@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] PAYLOAD DELIVERED
-[*] I don't break software. I reveal what it already was.
+[+] SEGFAULT AVOIDED
+[*] Every system is secure until someone reads the source.
 ```
 <!--BANNER:END-->
 
