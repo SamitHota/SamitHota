@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] ROOT ACQUIRED
-[*] Privilege escalation is just reading the docs carefully.
+[+] TUNNEL ENCRYPTED
+[*] Security is a process, and I automate processes.
 ```
 <!--BANNER:END-->
 
