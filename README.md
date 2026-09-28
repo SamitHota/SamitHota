@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] ZERO DAY LOADED
-[*] The bug was in production the whole time.
+[+] SHELL SPAWNED
+[*] cat /dev/urandom > /dev/brain
 ```
 <!--BANNER:END-->
 
