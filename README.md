@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] TUNNEL ENCRYPTED
-[*] Security is a process, and I automate processes.
+[+] HANDSHAKE COMPLETE
+[*] Trust nothing. Verify everything. Automate the rest.
 ```
 <!--BANNER:END-->
 
