@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] CHECKSUM VERIFIED
-[*] If it has an input, it has an attack surface.
+[+] ROOT ACQUIRED
+[*] Privilege escalation is just reading the docs carefully.
 ```
 <!--BANNER:END-->
 
