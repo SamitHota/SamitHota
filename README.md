@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] CHECKSUM VERIFIED
-[*] If it has an input, it has an attack surface.
+[+] HANDSHAKE COMPLETE
+[*] Trust nothing. Verify everything. Automate the rest.
 ```
 <!--BANNER:END-->
 
