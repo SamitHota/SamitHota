@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] EXPLOIT PATCHED
-[*] Exploit -> Understand -> Patch -> Repeat.
+[+] PAYLOAD DELIVERED
+[*] I don't break software. I reveal what it already was.
 ```
 <!--BANNER:END-->
 
