@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] ROOT ACQUIRED
-[*] Privilege escalation is just reading the docs carefully.
+[+] SHELL SPAWNED
+[*] cat /dev/urandom > /dev/brain
 ```
 <!--BANNER:END-->
 
