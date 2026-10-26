@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] TUNNEL ENCRYPTED
-[*] Security is a process, and I automate processes.
+[+] CHECKSUM VERIFIED
+[*] If it has an input, it has an attack surface.
 ```
 <!--BANNER:END-->
 
