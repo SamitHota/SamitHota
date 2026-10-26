@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] EXPLOIT PATCHED
-[*] Exploit -> Understand -> Patch -> Repeat.
+[+] SEGFAULT AVOIDED
+[*] Every system is secure until someone reads the source.
 ```
 <!--BANNER:END-->
 
