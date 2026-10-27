@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] EXPLOIT PATCHED
-[*] Exploit -> Understand -> Patch -> Repeat.
+[+] TUNNEL ENCRYPTED
+[*] Security is a process, and I automate processes.
 ```
 <!--BANNER:END-->
 
