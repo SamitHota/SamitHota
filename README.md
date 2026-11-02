@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] PAYLOAD DELIVERED
-[*] I don't break software. I reveal what it already was.
+[+] ROOT ACQUIRED
+[*] Privilege escalation is just reading the docs carefully.
 ```
 <!--BANNER:END-->
 
