@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] HANDSHAKE COMPLETE
-[*] Trust nothing. Verify everything. Automate the rest.
+[+] FIREWALL BYPASSED
+[*] Defence in depth means the attacker gets bored first.
 ```
 <!--BANNER:END-->
 
