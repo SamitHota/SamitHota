@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] FIREWALL BYPASSED
-[*] Defence in depth means the attacker gets bored first.
+[+] SHELL SPAWNED
+[*] cat /dev/urandom > /dev/brain
 ```
 <!--BANNER:END-->
 
