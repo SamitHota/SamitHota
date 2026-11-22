@@ -12,8 +12,8 @@ root@github:~# ./initiate_handshake.sh --user SamitHota
 <!--BANNER:START-->
 ```console
 root@github:~# ./status
-[+] EXPLOIT PATCHED
-[*] Exploit -> Understand -> Patch -> Repeat.
+[+] ROOT ACQUIRED
+[*] Privilege escalation is just reading the docs carefully.
 ```
 <!--BANNER:END-->
 
